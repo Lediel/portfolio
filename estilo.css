@@ -2,18 +2,22 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  color: white;
 }
 
 a {
   text-decoration: none;
-  color: white;
+}
+
+h2 {
+  color: #FF4A57;
+  margin-bottom: 10px;
 }
 
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
   background-color: #1F243E;
-  color: white;
 }
 
 header {
@@ -24,32 +28,25 @@ header {
   && .container {
     width: 800px;
     height: 300px;
-
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1fr 6fr;
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
     padding: 0px 20px;
   }
 
   && .navbar {
     grid-area: 1 / 1 / 2 / 2;
-    display: flex;
     padding-top: 20px;
 
     && nav ul {
       list-style: none;
       display: flex;
       gap: 20px;
-      padding: 0;
-      margin: 0;
     }
 
     && nav a {
       font-weight: bold;
       transition: color 0.3s ease;
-      color: white;
     }
 
     && nav a:hover {
@@ -65,9 +62,7 @@ header {
 
     && h1 {
       font-size: 2.5rem;
-      margin: 10px 0;
     }
-
   }
 
   && .imagem-header {
@@ -86,56 +81,50 @@ main {
   padding: 20px;
   max-width: 800px;
   margin: auto;
-}
 
-section,
-aside {
-  margin-bottom: 30px;
-}
-
-aside {
-  && a {
-    font-weight: bold;
+  && section,
+  aside {
+    margin-bottom: 30px;
   }
 
-  && a:hover {
-    color: #FF4A57;
-    transition: color 0.3s ease;
+  && ul {
+    padding-left: 20px;
   }
-}
 
-h2 {
-  color: #FF4A57;
-  margin-bottom: 10px;
-}
+  && article {
+    border: 1px solid #2A2D4A;
+    background-color: #1F2235;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .3s;
 
-ul {
-  padding-left: 20px;
-}
-
-article {
-  border: 1px solid #2A2D4A;
-  background-color: #1F2235;
-  margin-bottom: 15px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: .3s;
-
-  && div {
-    padding: 15px;
+    && div {
+      padding: 15px;
+    }
   }
-}
 
-article:hover {
-  background-color: #2A2D4A;
-  box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.3);
+  && article:hover {
+    background-color: #2A2D4A;
+    box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.3);
+  }
+
+  && aside {
+    && a {
+      font-weight: bold;
+    }
+
+    && a:hover {
+      color: #FF4A57;
+      transition: color 0.3s ease;
+    }
+  }
 }
 
 footer {
   text-align: center;
   padding: 15px;
   background-color: #1F2235;
-  color: white;
   margin-top: 30px;
 }
 
@@ -169,7 +158,8 @@ footer {
     font-size: 4vw;
   }
 
-  p, ul {
+  p,
+  ul {
     font-size: 3vw;
   }
 }
