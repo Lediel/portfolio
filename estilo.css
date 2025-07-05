@@ -1,0 +1,175 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #1F243E;
+  color: white;
+}
+
+header {
+  background-color: #1F2235;
+  display: flex;
+  justify-content: center;
+
+  && .container {
+    width: 800px;
+    height: 300px;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr 6fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    padding: 0px 20px;
+  }
+
+  && .navbar {
+    grid-area: 1 / 1 / 2 / 2;
+    display: flex;
+    padding-top: 20px;
+
+    && nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      padding: 0;
+      margin: 0;
+    }
+
+    && nav a {
+      font-weight: bold;
+      transition: color 0.3s ease;
+      color: white;
+    }
+
+    && nav a:hover {
+      color: #FF4A57;
+    }
+  }
+
+  && .texto-header {
+    grid-area: 2 / 1 / 3 / 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    && h1 {
+      font-size: 2.5rem;
+      margin: 10px 0;
+    }
+
+  }
+
+  && .imagem-header {
+    grid-area: 1 / 2 / 3 / 3;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+
+    && img {
+      height: 95%;
+    }
+  }
+}
+
+main {
+  padding: 20px;
+  max-width: 800px;
+  margin: auto;
+}
+
+section,
+aside {
+  margin-bottom: 30px;
+}
+
+aside {
+  && a {
+    font-weight: bold;
+  }
+
+  && a:hover {
+    color: #FF4A57;
+    transition: color 0.3s ease;
+  }
+}
+
+h2 {
+  color: #FF4A57;
+  margin-bottom: 10px;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+article {
+  border: 1px solid #2A2D4A;
+  background-color: #1F2235;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: .3s;
+
+  && div {
+    padding: 15px;
+  }
+}
+
+article:hover {
+  background-color: #2A2D4A;
+  box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.3);
+}
+
+footer {
+  text-align: center;
+  padding: 15px;
+  background-color: #1F2235;
+  color: white;
+  margin-top: 30px;
+}
+
+@media (max-width: 600px) {
+  header {
+    && .container {
+      height: 50vw;
+    }
+
+    && .navbar {
+      padding-top: 10px;
+
+      && nav ul {
+        gap: 10px;
+      }
+    }
+
+    && .texto-header {
+      && h1 {
+        font-size: 7vw;
+      }
+
+    }
+  }
+
+  h2 {
+    font-size: 5vw;
+  }
+
+  h3 {
+    font-size: 4vw;
+  }
+
+  p, ul {
+    font-size: 3vw;
+  }
+}
